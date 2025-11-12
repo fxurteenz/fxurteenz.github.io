@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week2 : Javascript</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <!-- <script type="text/javascript">
+        // let x = 1;
+        // let y = 2;
+        // let result = x % y;
+        // //  == === > < >= <= != !== 
+        // // and && or ||
+
+        // // เงื่อนไขเดียว
+        // if(z > 9){
+        //     // 
+        // }
+
+        // if(z < 8){
+        //     // 
+        // }
+
+        // // สองเงื่อนไข
+        // if(a){
+        //     // true
+        // }else{
+        //     // false
+        // }
+
+        // // หลายเงื่อไน
+        // if(b == 1){
+        //     //ถ้า b = 1 ทำตรงนี้
+        // }else if(b == 2){
+        //     //ถ้า b = 2 ทำตรงนี้
+        // }else if(b == 3){
+        //     //ถ้า b = 3 ทำตรงนี้
+        // }else{
+        //     //ถ้า b ไม่ตรงกับ อะไรเลย ทำตรงนี้
+        // }
+        // for(ค่าเริ่มต้น;เงื่อนไขที่จะให้ทำงาน; เปลี่ยนค่า )
+        for (let i = 10; i >= 0; i--) {
+            console.log(i)
+        }
+        
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        // console.log(cars[1]);
+        // console.log(cars[2]);
+        for(let i = 0; i <= 5;i++){
+            console.log("ตอนนี้ i = ",i);
+            console.log(cars[i]);
+        }
+
+    </script> -->
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+
+        const data = [5, 5, 3, 5, 2, 3];
+
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
